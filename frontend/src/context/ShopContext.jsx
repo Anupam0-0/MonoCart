@@ -16,7 +16,6 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({})
 
     const addToCart = async(itemId, size) => {
-
       if(!size){
         toast.error('Please select a size')
         return;
@@ -53,9 +52,6 @@ const ShopContextProvider = (props) => {
       return count;
     }
 
-    // useEffect(() => {
-    //   console.log(cartItems)
-    // }, [cartItems])
     
     const value = {
         products, currency, delivery_fee, search, setSearch, showSearch, setShowSearch, cartItems, addToCart, getCartCount
